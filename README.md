@@ -1,4 +1,3 @@
-# GITY
 ```
        _ _ __   __
   __ _(_) |\ \ / /
@@ -7,6 +6,11 @@
  \__, |_|\__||_|  
  |___/
 ```
+Script to initialize github-cli, and git to avoid reconfiguring them each time.
+```
+# Make program into exexutable
+chmod +x gity.sh
 
-
- script to init github-cli, and git to avoid reconfiguring them each time
+# Run program
+./gity.sh
+```
