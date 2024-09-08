@@ -32,10 +32,10 @@ echo "Git configuration complete. Use \"git config --list\" to see the current c
 git config --list
 
 # Starts auth process for github-cli on browser
+echo "Starting authentication process for Github CLI..."
 gh auth login
 	
 # Sets the default editor for the CLI
-echo "Starting authentication process for Github CLI..."
 gh config set editor "$EDITOR --wait"
 
 echo "Setup complete. You can use 'gh auth status' to check the Github CLI authentication status."
