@@ -1,14 +1,14 @@
 #!/bin/bash	
 
-PKM="pacman"
+PKGM="pacman"
 
 # Updates package manager
 echo "Updating package manager"
-sudo $PKM -Sy
+sudo $PKGM -Sy
 
 # Installs desired programs
 echo "Installing Git and Github CLI"
-sudo $PKM -S git github-cli
+sudo $PKGM -S git github-cli
 
 echo "Email and name are required to configure git"
 
@@ -18,7 +18,7 @@ read -r NAME
 echo "Enter your email address "
 read -r EMAIL 
 
-echo "Choose default editor (ensure it is installed) e.g. code, nvim... "
+echo "Choose default editor (ensure it is installed), code, nvim:  "
 read -r EDITOR 
 
 echo "Configuring Git ..."
@@ -37,6 +37,7 @@ git config --list
 gh auth login
 	
 # Sets the default editor for the CLI
+echo "Starting authentication process for Github CLI..."
 gh config set editor "$EDITOR --wait"
 
-echo "Setup complete. You can use "
+echo "Setup complete. You can use 'gh auth status' to check the Github CLI authentication status."
