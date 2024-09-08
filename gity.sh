@@ -1,14 +1,12 @@
 #!/bin/bash	
 
-PKGM="pacman"
-
 # Updates package manager
 echo "Updating package manager"
-sudo $PKGM -Sy
+sudo pacman -Sy
 
 # Installs desired programs
 echo "Installing Git and Github CLI"
-sudo $PKGM -S git github-cli
+sudo pacman -S git github-cli
 
 echo "Email and name are required to configure git"
 
